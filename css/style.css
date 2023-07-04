@@ -9,9 +9,9 @@
 }
 
 body {
-  font-family: 'Familjen Grotesk', sans-serif;
+  /* TODO 1 https://www.w3schools.com/cssref/pr_font_font-family.php */
   background: #000;
-  color: #fff;
+  /* TODO 2 https://www.w3schools.com/cssref/pr_text_color.php */
 }
 
 a {
@@ -20,7 +20,7 @@ a {
 }
 
 ul {
-  list-style: none;
+  /* TODO 3 https://www.w3schools.com/cssref/pr_list-style-type.php */
 }
 
 /* Header/Navbar */
@@ -30,8 +30,13 @@ ul {
   left: 0;
   width: 100%;
   z-index: 3;
-  display: flex;
-  justify-content: space-between;
+
+  /* 
+  Madani
+  faire une vidéo d'explication sur flex et justify-contentles en utilisant W3school */
+  /* TODO 4 https://www.w3schools.com/css/css3_flexbox.asp */
+  /* TODO 5 https://www.w3schools.com/cssref/css3_pr_justify-content.php */
+
   align-items: center;
   text-transform: uppercase;
   height: 100px;
@@ -40,8 +45,8 @@ ul {
 
 /* Logo */
 .logo {
-  width: 210px;
-  height: auto;
+    /* TODO 6 https://www.w3schools.com/cssref/pr_dim_width.php */
+    height: auto; 
 }
 
 .logo img {
@@ -56,7 +61,7 @@ ul {
 }
 
 .desktop-main-menu ul {
-  display: flex;
+ /* TODO 7 https://www.w3schools.com/css/css3_flexbox.asp  */
 }
 
 .desktop-main-menu ul li {
@@ -92,7 +97,7 @@ section {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  text-transform: uppercase;
+   /* TODO 7 https://www.w3schools.com/cssref/pr_text_text-transform.php  */
 }
 
 .section-inner {
@@ -119,16 +124,18 @@ section {
 
 .section-inner a {
   animation: fadeInUp 0.5s ease-in-out 0.4s;
-  animation-fill-mode: both; /* Stop from showing at start*/
+  animation-fill-mode: both; // Stop from showing at start
 }
 
 /* Background images */
 .section-a {
-  background-image: url('../img/section-a.webp');
+ /* TODO 8 https://www.w3schools.com/cssref/pr_background-image.php */
 }
+
 .section-b {
   background-image: url('../img/section-d.webp');
 }
+
 
 .btn {
   position: relative;
@@ -166,13 +173,6 @@ section {
   transform: translateY(0);
 }
 
-.scroll-arrow {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: fadeBounce 5s infinite;
-}
 
 /* Footer */
 footer {
@@ -361,26 +361,6 @@ footer ul li a:hover {
   font-size: 20px;
   animation: fadeInUp 0.5s ease-in-out 0.2s;
   animation-fill-mode: both;
-}
-
-/* Stats */
-.stats {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.stats div span {
-  font-size: 160px;
-}
-
-.stats div h4 {
-  font-size: 24px;
-  font-weight: 300;
 }
 
 /* Animations */

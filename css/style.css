@@ -9,9 +9,9 @@
 }
 
 body {
-  /* TODO 1 https://www.w3schools.com/cssref/pr_font_font-family.php */
+  font-family: 'Familjen Grotesk', sans-serif;
   background: #000;
-  /* TODO 2 https://www.w3schools.com/cssref/pr_text_color.php */
+  color: #fff;
 }
 
 a {
@@ -20,7 +20,7 @@ a {
 }
 
 ul {
-  /* TODO 3 https://www.w3schools.com/cssref/pr_list-style-type.php */
+  list-style: none;
 }
 
 /* Header/Navbar */
@@ -30,13 +30,8 @@ ul {
   left: 0;
   width: 100%;
   z-index: 3;
-
-  /* 
-  Madani
-  faire une vidéo d'explication sur flex et justify-contentles en utilisant W3school */
-  /* TODO 4 https://www.w3schools.com/css/css3_flexbox.asp */
-  /* TODO 5 https://www.w3schools.com/cssref/css3_pr_justify-content.php */
-
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
   height: 100px;
@@ -45,8 +40,8 @@ ul {
 
 /* Logo */
 .logo {
-    /* TODO 6 https://www.w3schools.com/cssref/pr_dim_width.php */
-    height: auto; 
+  width: 210px;
+  height: auto;
 }
 
 .logo img {
@@ -61,7 +56,7 @@ ul {
 }
 
 .desktop-main-menu ul {
- /* TODO 7 https://www.w3schools.com/css/css3_flexbox.asp  */
+  display: flex;
 }
 
 .desktop-main-menu ul li {
@@ -97,7 +92,7 @@ section {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-   /* TODO 7 https://www.w3schools.com/cssref/pr_text_text-transform.php  */
+  text-transform: uppercase;
 }
 
 .section-inner {
@@ -124,18 +119,16 @@ section {
 
 .section-inner a {
   animation: fadeInUp 0.5s ease-in-out 0.4s;
-  animation-fill-mode: both; // Stop from showing at start
+  animation-fill-mode: both; /* Stop from showing at start*/
 }
 
 /* Background images */
 .section-a {
- /* TODO 8 https://www.w3schools.com/cssref/pr_background-image.php */
+  background-image: url('../img/section-a.webp');
 }
-
 .section-b {
   background-image: url('../img/section-d.webp');
 }
-
 
 .btn {
   position: relative;
@@ -173,6 +166,13 @@ section {
   transform: translateY(0);
 }
 
+.scroll-arrow {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeBounce 5s infinite;
+}
 
 /* Footer */
 footer {
@@ -363,6 +363,26 @@ footer ul li a:hover {
   animation-fill-mode: both;
 }
 
+/* Stats */
+.stats {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stats div span {
+  font-size: 160px;
+}
+
+.stats div h4 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
 /* Animations */
 
 @keyframes fadeInUp {
@@ -459,4 +479,108 @@ footer ul li a:hover {
   .stats div {
     margin-bottom: 20px;
   }
+}
+
+
+/******************************************************************************************
+   formulaire
+   ****************************************************************************************/
+   
+   .contact-clean {
+    position:relative;
+    top: 120px;
+  }
+
+  
+  
+  .contact-clean h2 {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 36px;
+    color: inherit;
+  }
+  
+  .section-inner form {
+    margin-bottom: 20px;
+    animation: fadeInUp 0.5s ease-in-out 0.2s;
+    animation-fill-mode: both; /* Stop from showing at start*/
+    border: solid;
+    border-color: #fff;
+    border-radius: 10px;
+    padding: 0px 20px 5px;
+    box-shadow: 5px 5px 20px white;
+  }
+  
+  /****** Bootstrap ****/
+.invisible {
+    visibility: hidden!important;
+}
+
+.text-danger {
+  color: #dc3545!important;
+}
+
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.contact-clean form .form-control {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+  outline: none;
+  color: inherit;
+  padding-left: 12px;
+  height: 42px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.contact-clean form .btn-primary {
+  background-color: #055ada !important;
+  margin-top: 15px;
+  color: #fff;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.contact-clean form .btn {
+  padding: 16px 32px;
+  border: none;
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+  opacity: 0.7;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  line-height: 1;
+  outline: none !important;
+}
+
+.contact-clean form textarea.form-control {
+  min-height: 100px;
+  max-height: 260px;
+  padding-top: 10px;
+  resize: vertical;
 }
